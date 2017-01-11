@@ -50,3 +50,18 @@ Rocket.prototype.show = function () {
 }
 // END ROCKET
 
+// POPULATION
+function Population() {
+    this.rockets = [];
+    for (var i = 0; i < POP_SIZE; i++) {
+        this.rockets[i] = new Rocket();
+    }
+}
+
+Population.prototype.run = function () {
+    for (var i = 0; i < POP_SIZE; i++) {
+        this.rockets[i].update();
+        this.rockets[i].show();
+    }
+}
+// END POPULATION
