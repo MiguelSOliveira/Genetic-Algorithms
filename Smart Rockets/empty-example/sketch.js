@@ -65,3 +65,19 @@ Population.prototype.run = function () {
     }
 }
 // END POPULATION
+
+// DNA
+function DNA() {
+    this.genes = this.getGenes();
+}
+
+DNA.prototype.getGenes = function () {
+    var genes = [];
+
+    for (var i = 0; i < LIFESPAN; i++) {
+        genes[i] = p5.Vector.random2D();
+    }
+
+    return genes;
+}
+// END DNA
